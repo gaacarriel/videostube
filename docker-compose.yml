@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  videostube:
+    build:
+      context: ./   
+    ports:
+      - "3003:80"
+    env_file:
+      - .env
+    depends_on:
+      - mf_drawer
+      - mf_videos
+
+  backend:
+    build:
+      context: ./backend  
+    ports:
+      - "3002:3002"
+    env_file:
+      - .env
+
+  mf_drawer:
+    build: ../mf_drawer
+    ports:
+      - "3000:80"
+
+  mf_videos:
+    build: ../mf_videos
+    ports:
+      - "3008:80"
