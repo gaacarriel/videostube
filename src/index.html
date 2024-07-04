@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="drawer.css">
     <title>VideoTube</title>
 </head>
 <body>
-    <header>
-        <h1>Videos<div>Tube</div></h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#/favoritos">Favoritos</a>
-                </li>
-                <li>
-                    <a href="#/videos">Videos</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <div id="mf-drawer"></div>
 
-    <main>
-        <div class="mf-container">
-            <iframe src="https://pt.wikipedia.org/wiki/Sorocaba" style="width: 100%; height: 100vh; border: none;"></iframe>
-        </div>
-    </main>
+        <main>
+            <div class="mf-container">
+                <iframe id="content-frame" src="" style="width: 100%; height: 100vh; border: none;"></iframe>
+            </div>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

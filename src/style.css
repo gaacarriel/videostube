@@ -2,17 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-decoration: none;
+}
+
+.container{
+    max-width: 95%;
+    margin: auto;
 }
 
 body {
     font-family: Arial, sans-serif;
 }
 
-nav ul {
-    list-style-type: none;
-}
+@media only screen and (min-width: 1024px) {
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+    .mf-drawer{
+        padding-top: 10px;
+        min-width: 20%;
+    }
+
+    main{
+        min-width: 80%;
+    }
 }
